@@ -28,6 +28,7 @@ public class Company implements Serializable{
 	public void setName(String name) {
 		this.name = name;
 		// comment 20/9/2018
+		//comment 21/9/2018
 	}
 	
 }
