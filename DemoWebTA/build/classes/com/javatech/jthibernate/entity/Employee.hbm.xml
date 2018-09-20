@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+	<!DOCTYPE hibernate-mapping PUBLIC
+	        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+	 
+	<hibernate-mapping package="com.javatech.jthibernate.entity">
+	<class name="Employee" table="employee">
+	        <id name="id" column="id">
+	            <generator class="increment"/>
+	        </id>
+	        <property name="name" column="name"/>
+	        <property name="email"/>
+	        
+	        <!-- đây là quan hệ nhiều một -->
+	        <many-to-one name="company" 
+	        column="companyId" class="Company"
+	        not-null="true" lazy="false"/> <!--lazy=false cho phép lôi từ 2 bảng ra  --> 
+
+	    </class>
+	</hibernate-mapping>
+	
+	
+
+	
